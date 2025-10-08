@@ -313,7 +313,7 @@
     <input type="text" id="nameInput" placeholder="Username">
     <span>Text Color
     <input type="color" id="textColor" value="#e8e3d5"></span>
-    <span>Text Color
+    <span>Back Color
     <input type="color" id="textBgColor" value="#0b0b0b"></span>
     <input type="file" id="avatarUpload" accept="image/*">
 
@@ -407,7 +407,7 @@
     }
   };
 
-  // === Ubah Materi Otomatis ===
+  // === Change material ===
   materiSelect.addEventListener("change", () => {
     const selected = materiSelect.value;
     const materi = materiData[selected];
@@ -437,7 +437,7 @@
 
     document.getElementById("materi-title").textContent = materiSelect.value;
     document.getElementById("socialHandle").textContent = xInput.value || "@RialoNetwork";
-    document.getElementById("userName").textContent = nameInput.value || "Nama User";
+    document.getElementById("userName").textContent = nameInput.value || "Username";
     textArea.style.color = textColor.value;
     textArea.style.background = textBgColor.value + "cc";
 
@@ -472,7 +472,7 @@
 
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
       await navigator.share({
-        text: "✨ My RialO Card Created with #RialOshare",
+        text: "✨ My RialO Threads Created with #RialOshare",
         files: [file],
       });
     } else {
