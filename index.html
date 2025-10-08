@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>RialOshare</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #0b0b0b 0%, #010101 100%);
+      font-family: "Poppins", sans-serif;
+      color: #e8e3d5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-family: Boldonse;
+      font-size: 80px;
+      margin-bottom:12px;
+      color: #a9ddd3;
+      text-shadow: 0 0 20px rgba(169, 221, 211, 0.6);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    
+    h3,a {
+      font-family: Montserrat;
+      margin-top:2px;
+      margin-bottom: 30px;
+      text-decoration: none;
+      color:white;
+    }
+
+    .preview {
+      position: relative;
+      width: 820px;
+      height: 420px;
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+      box-shadow: 0 0 50px rgba(169, 221, 211, 0.2);
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(169, 221, 211, 0.15);
+      background: rgba(20, 20, 20, 0.7);
+    }
+
+    .bg-layer{
+      z-index: 1;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+    }
+
+    .overlay-decor { z-index: 999; pointer-events: none; 
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+    }
+    .preview > *:not(.bg-layer):not(.overlay-decor) { position: relative; z-index: 999; }
+
+    /* -------- TEXT AREA -------- */
+    .text-area {
+      text-decoration: none;
+      max-width: 460px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 14px 18px;
+      border-radius: 14px;
+      transition: 0.3s;
+      box-shadow: inset 0 0 15px rgba(169, 221, 211, 0.1);
+      border-left: 2px solid rgba(169, 221, 211, 0.25);
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      text-align: center;
+    }
+
+    .text-area h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      
+    }
+
+    .text-area ol {
+      text-decoration: none;
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.6;
+      padding-left: 18px;
+    }
+
+    /* -------- PROFILE CARD -------- */
+    .profile-card {
+      background: rgba(10,10,10,0.8);
+      border: 1px solid rgba(169,221,211,0.15);
+      border-radius: 18px;
+      width: 250px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-shadow: 0 0 25px rgba(169,221,211,0.15);
+    }
+
+    .profile-card img {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(169,221,211,0.4);
+    }
+
+    .nickname {
+      font-weight: 600;
+      font-size: 17px;
+      margin-bottom: 10px;
+      color: #a9ddd3;
+    }
+
+    .roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .role-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(169,221,211,0.1);
+      border-radius: 12px;
+      padding: 5px 9px;
+      font-size: 13px;
+      border: 1px solid rgba(169,221,211,0.2);
+      color: #e8e3d5;
+    }
+
+    .role-badge img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .x-handle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #b0bcb7;
+    }
+
+    .x-handle svg {
+      width: 16px;
+      height: 16px;
+      fill: #a9ddd3;
+    }
+
+    /* -------- CONTROLS -------- */
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      width: 820px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 16px;
+      padding: 22px;
+      border: 1px solid rgba(169,221,211,0.1);
+      box-shadow: 0 0 20px rgba(169,221,211,0.1);
+    }
+
+    select, input, button {
+      font-family: "Poppins", sans-serif;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid rgba(169,221,211,0.15);
+      background: #101010;
+      color: #e8e3d5;
+    }
+
+    .btn-group {
+      grid-column: span 3;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    .btn-group button {
+      background: linear-gradient(90deg, #a9ddd3, #e8e3d5);
+      color: #010101;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s;
+      padding: 10px 18px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(169,221,211,0.3);
+    }
+
+    .btn-group button:hover {
+      background: linear-gradient(90deg, #e8e3d5, #a9ddd3);
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(169,221,211,0.6);
+    }
+
+    .multi-select {
+      position: relative;
+    }
+
+    .multi-select-content {
+      display: none;
+      position: absolute;
+      top: 45px; left: 0;
+      background: rgba(15,15,15,0.95);
+      border-radius: 10px;
+      padding: 12px;
+      width: 100%;
+      z-index: 30;
+      border: 1px solid rgba(169,221,211,0.15);
+    }
+
+    .multi-select:hover .multi-select-content { display: block; }
+
+    .multi-select label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 0;
+      font-size: 16px;
+      color: #e8e3d5;
+      cursor: pointer;
+    }
+
+    .multi-select img {
+      width: 20px;
+      height: 20px;
+    }
+  ul {
+  list-style: none; /* remove bullet or number */
+  padding-left: 2px;
+}
+
+  li {
+  list-style: none;
+  margin-bottom: 4px;
+  padding-left: 8px;
+  border-left: 6px solid #a9ddd3; /*indicator line */
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+
+  </style>
+</head>
+<body>
+  <h1>RialOshare</h1>
+  <h3>by: <a href="www.x.com/soullmon_">@soullmon_  </a>  |   Powered by: <a href="www.x.com/RialoHQ">@RialoHQ</a></h3>
+
+  <div class="preview" id="preview">
+    <div class="bg-layer" id="bgLayer"></div>
+    <div class="text-area" id="textArea">
+      <h2 id="materi-title">How To Use RialOshare Generator</h2>
+      <ol id="materi-desc">
+<li> Select the material to display on the banner.</li>
+<li> Enter your nickname X for the profile.</li>
+<li> Upload an avatar/profile image from your device.</li>
+<li> Choose a role (optional) to show on the banner.</li>
+<li> Click 'Generate Banner' to create the banner with a random background and top-layer decoration.</li>
+<li> Download the created banner using the 'Download' button.</li>
+<li> Share the banner to X (Twitter) using the 'Share to X' button.</li>
+
+      </ol>
+    </div>
+
+    <div class="profile-card">
+      <img id="avatar" src="https://via.placeholder.com/90" alt="RialOverse">
+      <div class="nickname" id="userName">Username</div>
+      <div class="roles" id="roleList"></div>
+      <div class="x-handle">
+        <svg viewBox="0 0 24 24"><path d="M18.36 2H21l-6.54 7.46L22 22h-5.63l-4.39-5.59L6.4 22H3l7.07-8.06L2.48 2h5.75l3.9 5.19L18.36 2z"/></svg>
+        <span id="socialHandle">@RialoNetwork</span>
+      </div>
+    </div>
+    <div class="overlay-decor" id="overlayDecor"></div>
+  </div>
+
+  <div class="controls">
+    <select id="materiSelect">
+      <option>Tutorial</option>
+      <option>What is Rialo?</option>
+      <option>RWA Rialo</option>
+      <option>Rialo Isn't Layer One</option>
+      <option>This Is Just Beginning</option>
+    </select>
+
+    <input type="text" id="xInput" placeholder="@nickname X">
+    <input type="text" id="nameInput" placeholder="Username">
+    <span>Text Color
+    <input type="color" id="textColor" value="#e8e3d5"></span>
+    <span>Text Color
+    <input type="color" id="textBgColor" value="#0b0b0b"></span>
+    <input type="file" id="avatarUpload" accept="image/*">
+
+    <div class="multi-select">
+      <button>Pilih Role ▼</button>
+      <div class="multi-select-content" id="roleDropdown">
+        <label><input type="checkbox" value="rialone"><img src="assets/icons/rialone.png"><span>RialOne</span></label>
+        <label><input type="checkbox" value="rialops"><img src="assets/icons/rialops.png"><span>RialOps</span></label>
+        <label><input type="checkbox" value="xplorer"><img src="assets/icons/xplorer.png"><span>Xplorer</span></label>
+        <label><input type="checkbox" value="badgex"><img src="assets/icons/badgex.png"><span>BadgeX</span></label>
+        <label><input type="checkbox" value="builder"><img src="assets/icons/builder.png"><span>Builder</span></label>
+        <label><input type="checkbox" value="rialoclub"><img src="assets/icons/rialoclub.png"><span>Rial Club</span></label>
+        <label><input type="checkbox" value="rialorbit"><img src="assets/icons/rialorbit.png"><span>Rial Orbit</span></label>
+        <label><input type="checkbox" value="rialoyal"><img src="assets/icons/rialoyal.png"><span>RialOyal</span></label>
+        <label><input type="checkbox" value="helper"><img src="assets/icons/helper.png"><span>Region Helper</span></label>
+        <label><input type="checkbox" value="smartdev"><img src="assets/icons/smartdev.png"><span>Smart Contract Dev</span></label>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <button id="generateBtn">Generate</button>
+      <button id="downloadBtn">Download</button>
+      <button id="shareBtn">Share ke X</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script>
+  const avatarUpload = document.getElementById("avatarUpload");
+  const avatar = document.getElementById("avatar");
+  const roleList = document.getElementById("roleList");
+  const roleDropdown = document.getElementById("roleDropdown");
+  const materiSelect = document.getElementById("materiSelect");
+  const xInput = document.getElementById("xInput");
+  const nameInput = document.getElementById("nameInput");
+  const textColor = document.getElementById("textColor");
+  const textBgColor = document.getElementById("textBgColor");
+  const textArea = document.getElementById("textArea");
+  const overlayDecor = document.getElementById("overlayDecor");
+  const bgLayer = document.getElementById("bgLayer");
+  const preview = document.getElementById("preview");
+  const materiTitle = document.getElementById("materi-title");
+  const materiDesc = document.getElementById("materi-desc");
+
+  const randomBackgrounds = ["assets/bg1.jpg","assets/bg2.jpg","assets/bg3.jpg","assets/bg4.jpg","assets/bg5.jpg","assets/bg6.jpg"];
+  const decorImages = ["assets/decor1.png","assets/decor2.png","assets/decor3.png","assets/decor4.png","assets/decor5.png","assets/decor6.png","assets/decor7.png"];
+
+  // === Tambahan: Data Materi ===
+  const materiData = {
+      "Tutorial": { 
+    title: "How To Use RialOshare Generator",
+    list: [
+      "1. Select the material to display on the banner.",
+      "2. Enter your nickname X for the profile.",
+      "3. Upload an avatar/profile image from your device.",
+      "4. Choose a role (optional) to show on the banner.",
+      "5 Click 'Generate Banner' to create the banner with a random background and top-layer decoration.",
+      "6. Download the created banner using the 'Download' button.",
+      "7. Share the banner to X (Twitter) using the 'Share to X' button."
+
+    ]
+  },
+    
+    "What is Rialo?": {
+      title: "What Is Rialo?",
+      list: [
+         " Rialo is more than just a typical Layer 1 blockchain. It is a full-stack system that integrates various components such as web calls, oracles, scheduling, and native stable gas. This allows developers to build responsive applications that connect directly to real-world data without needing additional middleware."
+      ]
+    },
+    "RWA Rialo": {
+      title: "RWA Rialo",
+      list: [
+        "<strong>1. Direct data connectivity</strong> Assets are directly linked to real-world data and react automatically.",
+        "<strong>2. Automation & on-chain reactivity</strong> Smart contracts adjust prices, payments, and terms in real time.",
+        "<strong>3. Privacy & real identity</strong> Supports real-world identities with built-in privacy protection.",
+        "<strong>4. Speed & scalability</strong> Sub-second reactions and capable of handling large-scale performance.",
+        "<strong>Rialo makes Real-World Assets come alive on-chain — connected, automated, and responsive<strong>"
+      ]
+    },
+    "Rialo Isn't Layer One": {
+      title: "Rialo Isn't Layer One",
+      list: [
+        "<strong> No plugins. No patchwork. Rialo unifies what used to be fragmented into a single, full-stack system, so apps can launch faster, and run smoother like the products people expect. Web calls, smart triggers, cross-chain flows, it’s all native. Build Less, Build More<strong>"
+      ]
+    },
+    "This Is Just Beginning": {
+      title: "This Is Just Beginning",
+      list: [
+        "Subzero Labs believes the future of Web3 is AI - native— where users can earn passive income through AI agents and build custom AI workflows on - chain without complex prompt engineering. Rialo makes this possible, with SCALE as the first step toward that vision. In the coming months, they’ ll share tutorials and examples showing how easy it is to use SCALE on Rialo, and explore more Rialo + AI use cases in DeFi and beyond. They invite developers and creators to join and collaborate in building the future of Rialo + AI."
+      ]
+    }
+  };
+
+  // === Ubah Materi Otomatis ===
+  materiSelect.addEventListener("change", () => {
+    const selected = materiSelect.value;
+    const materi = materiData[selected];
+    if (materi) {
+      materiTitle.textContent = materi.title;
+      materiDesc.innerHTML = materi.list.map(li => `<li>${li}</li>`).join("");
+    }
+  });
+
+  avatarUpload.addEventListener("change", e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => avatar.src = ev.target.result;
+    reader.readAsDataURL(file);
+  });
+
+  document.getElementById("generateBtn").addEventListener("click", () => {
+    roleList.innerHTML = "";
+    const checked = roleDropdown.querySelectorAll("input:checked");
+    checked.forEach(cb => {
+      const div = document.createElement("div");
+      div.classList.add("role-badge");
+      div.innerHTML = `<img src="assets/icons/${cb.value}.png"><span>${cb.parentElement.querySelector("span").textContent}</span>`;
+      roleList.appendChild(div);
+    });
+
+    document.getElementById("materi-title").textContent = materiSelect.value;
+    document.getElementById("socialHandle").textContent = xInput.value || "@RialoNetwork";
+    document.getElementById("userName").textContent = nameInput.value || "Nama User";
+    textArea.style.color = textColor.value;
+    textArea.style.background = textBgColor.value + "cc";
+
+    bgLayer.innerHTML = "";
+    const bg = document.createElement("img");
+    bg.src = randomBackgrounds[Math.floor(Math.random() * randomBackgrounds.length)];
+    Object.assign(bg.style, {width:"100%",height:"100%",objectFit:"cover",opacity:"0.9"});
+    bgLayer.appendChild(bg);
+
+    overlayDecor.innerHTML = "";
+    const decor = document.createElement("img");
+    decor.src = decorImages[Math.floor(Math.random() * decorImages.length)];
+    Object.assign(decor.style,{position:"absolute",width:"100%",height:"100%",objectFit:"cover",opacity:"0.8"});
+    overlayDecor.appendChild(decor);
+  });
+
+  // --- DOWNLOAD FUNCTION ---
+  document.getElementById("downloadBtn").addEventListener("click", async () => {
+    const canvas = await html2canvas(preview, { backgroundColor: null, scale: 2 });
+    const link = document.createElement("a");
+    link.download = "RialOshare.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  });
+
+  // --- SHARE TO X FUNCTION ---
+  document.getElementById("shareBtn").addEventListener("click", async () => {
+    const canvas = await html2canvas(preview, { backgroundColor: null, scale: 2 });
+    const image = canvas.toDataURL("image/png");
+    const blob = await (await fetch(image)).blob();
+    const file = new File([blob], "RialO-Card.png", { type: "image/png" });
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        text: "✨ My RialO Card Created with #RialOshare",
+        files: [file],
+      });
+    } else {
+      const tweetText = encodeURIComponent("✨ My RialO Card Created with #RialOshare");
+      window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, "_blank");
+    }
+  });
+</script>
+
+</body>
+</html>
