@@ -17,6 +17,12 @@ body {
       text-shadow: 0 0 10px rgba(169, 221, 211, 0.6);
       font-weight: 600;
       letter-spacing: 1px;
+
+          h2 {
+      margin-bottom:-6px ;
+     
+      
+    }
     }
     
     h3,a {
@@ -78,7 +84,7 @@ body {
     .text-area h2 {
       font-size: 24px;
       margin-top:-4px ;
-      color: #a9ddd3
+      color: #a9ddd3;
       
     }
 
