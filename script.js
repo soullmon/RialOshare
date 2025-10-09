@@ -31,7 +31,7 @@ avatarUpload.addEventListener("change", (event) => {
     // === Tambahan: Data Materi ===
   const materiData = {
     "Tutorial": { 
-      title: "How To Use RialOshare Generator",
+      title: "How To Use RialOshare",
       content: `
         <ul>
           <li> Select the material to display on the banner.</li>
