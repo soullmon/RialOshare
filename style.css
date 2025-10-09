@@ -262,7 +262,7 @@ body {
 .text-area img {
   width: 100%;                /* agar lebar gambar menyesuaikan area teks */
   border-radius: 12px;        /* sudut lembut */
-  margin: 8px;        /* jarak atas dan bawah */
+  margin: 12px -12px;        /* jarak atas dan bawah */
  /*  box-shadow: 0 0 18px rgba(169, 221, 211, 0.15); efek cahaya lembut */
   /*border: 1px solid rgba(169, 221, 211, 0.25);     garis halus */
   object-fit: cover;          /* jaga proporsi tanpa melar */
