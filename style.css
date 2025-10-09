@@ -369,117 +369,137 @@ body {
     font-size: 12px;
   }
 }
-
-/* --- Responsive Mobile Layout --- */
-@media (max-width: 768px) {
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
   body {
     padding: 20px;
-    font-size: 14px;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 48px;
     text-align: center;
   }
 
   h3 {
     font-size: 14px;
     text-align: center;
-    flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
+  /* --- Preview Card --- */
   .preview {
     width: 100%;
     height: auto;
-    aspect-ratio: 1 / 1;
-    flex-direction: column;
-    position: relative;
-    padding: 10px;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
   }
 
   .text-area {
-    padding: 15px;
+    max-width: 100%;
     font-size: 14px;
+    text-align: left;
+    padding: 10px;
   }
 
   .text-area h2 {
-    font-size: 18px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .text-area ol, .text-area ul {
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .profile-card {
-    position: relative;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: flex-start;
-    padding: 10px;
     width: 100%;
-    height: auto;
-    background: rgba(0,0,0,0.5);
-    border-radius: 16px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
   }
 
   .profile-card img {
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
   }
 
   .nickname {
-    font-size: 18px;
+    font-size: 15px;
   }
 
+  .role-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .x-handle {
+    font-size: 12px;
+  }
+
+  /* --- Control Panel --- */
   .controls {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  select, input, button {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .multi-select {
-    width: 100%;
-  }
-
-  .multi-select-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
+    grid-template-columns: 1fr;
+    padding: 15px;
   }
 
   .btn-group {
-    display: flex;
     flex-direction: column;
     gap: 10px;
+    grid-column: span 1;
+  }
+
+  .btn-group button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  select, input, button {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  /* --- Multi Select Dropdown --- */
+  .multi-select-content {
+    position: relative;
+    top: 0;
+    background: rgba(20,20,20,0.95);
+  }
+
+  .multi-select button {
+    width: 100%;
   }
 }
 
-/* --- Extra small phones --- */
+/* === SMALLER DEVICES (under 480px) === */
 @media (max-width: 480px) {
   h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .text-area h2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
-  .profile-card img {
-    width: 60px;
-    height: 60px;
+  .text-area ol, .text-area ul {
+    font-size: 13px;
   }
 
-  .nickname {
-    font-size: 16px;
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .roles img {
-    width: 20px;
-    height: 20px;
+  .controls {
+    padding: 12px;
+  }
+
+  .btn-group button {
+    font-size: 13px;
+    padding: 8px 10px;
   }
 }
-
-
-
