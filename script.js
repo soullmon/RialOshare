@@ -45,7 +45,7 @@ avatarUpload.addEventListener("change", (event) => {
       `
     },
     
-    "What is Rialo?": {
+    "What Is Rialo?": {
       title: "What Is Rialo?",
       content: `
         <h3>Rialo is more than just a typical Layer 1 blockchain. It is a full-stack system that integrates web calls, oracles, scheduling, and native stable gas.</h3>
