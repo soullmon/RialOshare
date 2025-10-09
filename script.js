@@ -17,6 +17,18 @@
   const randomBackgrounds = ["assets/bg1.jpg","assets/bg2.jpg","assets/bg3.jpg","assets/bg4.jpg","assets/bg5.jpg","assets/bg6.jpg","assets/bg7.jpg"];
   const decorImages = ["assets/decor1.png","assets/decor2.png","assets/decor3.png","assets/decor4.png","assets/decor5.png","assets/decor6.png","assets/decor7.png","assets/decor8.png","assets/decor9.png","assets/decor10.png"];
 
+// === Avatar Upload ===
+avatarUpload.addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      avatarImg.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
     // === Tambahan: Data Materi ===
   const materiData = {
     "Tutorial": { 
