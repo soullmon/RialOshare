@@ -1,55 +1,66 @@
 # RialOshare | Rialo Threads Generator
-**RialOshare** adalah **alat pembuat postingan (thread) X/Twitter** tentang ekosistem **Rialo**, dibuat untuk mendukung **komunitas dan kontribusi edukatif**.  
-Dengan RialOshare, kamu dapat **menghasilkan thread otomatis** dan **berbagi wawasan tentang Rialo** dengan cara yang menarik, cepat, dan konsisten.
 
+**RialOshare** is a **thread/post generator tool for X (Twitter)** focused on the **Rialo ecosystem**, built to support **community education and contribution**.  
+With RialOshare, you can **automatically generate educational threads** and **share insights about Rialo** in an engaging, fast, and consistent way.
 
-## 🚀 Apa itu RialOshare?
-RialOshare adalah proyek kedua saya untuk komunitas Rialo mempermudah siapa pun untuk:
-- ✍️ Membuat **thread edukasi otomatis** seputar teknologi dan konsep Rialo.   
-- 🎨 Menambahkan **avatar dan identitas komunitas** ke setiap postingan.  
-- 🤝 Berkontribusi pada penyebaran edukasi tentang **AI-native Web3** ke publik.
+---
 
+## 🚀 What is RialOshare?
+RialOshare is my **second community project** for Rialo, designed to help anyone:
+- ✍️ Create **automated educational threads** about Rialo’s technology and concepts.  
+- 🎨 Add **avatars and community identities** to each post.  
+- 🤝 Contribute to spreading awareness and education about **AI-native Web3** to the public.
 
-## 🧩 Fitur Utama
-- 🧵 **Thread Generator** — Ubah konten dari web atau blog Rialo menjadi thread siap posting.   
-- 🪪 **Avatar & Role** — Tambahkan identitas kontributor (nama, avatar, peran).  
-- 🖼️ **Visual Support** — Sertakan banner atau visual otomatis untuk mempercantik postingan.  
-- 🌐 **Komunitas Terbuka** — Siapa pun bisa ikut berkontribusi membuat dan membagikan konten tentang Rialo.  
+---
 
-## 🎯 Tujuan Proyek
-> **komunitas Rialo** untuk berbagi wawasan dan pengetahuan tentang AI-native Web3 secara terbuka dan kolaboratif.
+## 🧩 Key Features
+- 🧵 **Thread Generator** — Turn content from the Rialo website or blog into ready-to-post X/Twitter threads.  
+- 🪪 **Avatar & Role System** — Add contributor identity (name, avatar, and role).  
+- 🖼️ **Visual Support** — Include automatic banners or visuals to enhance your posts.  
+- 🌐 **Open Community** — Anyone can join and contribute by creating and sharing Rialo-related content.  
 
-RialOshare hadir agar edukasi tentang **Rialo** dapat disebarkan ke publik melalui media sosial dengan cara yang sederhana namun bermakna.
+---
 
+## 🎯 Project Goal
+> Empower the **Rialo community** to share knowledge and insights about AI-native Web3 openly and collaboratively.
 
-## ⚙️ Cara Menggunakan
-1. Masuk ke **RialOshare Web App** atau buka file lokal.  
-2. Masukkan:
-   - 🪪 Nama / Nickname  
-   - 🖼️ Avatar (opsional)  
-   - 🧩 Role (Contributor, Researcher, Builder, dll)  
-3. Pilih sumber materi: 
-4. Klik **Generate Thread**.  
-5. Edit atau ubah gaya warna jika perlu  
-6. download hasilnya dan **posting langsung ke X/Twitter**.
+RialOshare exists to help spread **Rialo education** to the public through social media — in a simple yet meaningful way.
 
-   
-## 🤝 Kontribusi
-Kontribusi selalu terbuka!  
-Kamu bisa membantu dengan:
-- Menambahkan sumber edukasi baru  
-- Membuat gaya template thread tambahan  
-- Mengembangkan versi mobile / web  
-- Menyebarkan hasil konten ke komunitas Web3 dan AI  
+---
 
+## ⚙️ How to Use
+1. Open the **RialOshare Web App** or run the local version.  
+2. Enter:
+   - 🪪 Name / Nickname  
+   - 🖼️ Avatar (optional)  
+   - 🧩 Role (Contributor, Researcher, Builder, etc.)  
+3. Select a source material.  
+4. Click **Generate Thread**.  
+5. Edit or adjust the color/style if needed.  
+6. Download the result and **post it directly to X/Twitter**.  
 
-### 🌌 “Share your threads. Spread the knowledge. Build the AI-native Web3"
+---
 
-## Rethink, Rebuild, Rialo. 
+## 🤝 Contribution
+Contributions are always welcome!  
+You can help by:
+- Adding new educational sources  
+- Creating additional thread templates  
+- Developing a mobile or web version  
+- Sharing generated content across Web3 and AI communities  
 
-Soullmon
+---
 
-## Build Your PFS Avatars : https://soullmon.github.io/RialOverse/
+### 🌌 “Share your threads. Spread the knowledge. Build the AI-native Web3.”
 
-[![Twitter](https://img.shields.io/badge/Twitter-%40soullmon-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)]([https://x.com/soullmon_])
-[![Website](https://img.shields.io/badge/Website-soullmon-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)]([https://soullmon.github.io/portfolio/])
+---
+
+## Rethink, Rebuild, Rialo.  
+
+**Soullmon**
+
+### Build Your PFS Avatars  
+🔗 [https://soullmon.github.io/RialOverse/](https://soullmon.github.io/RialOverse/)
+
+[![Twitter](https://img.shields.io/badge/Twitter-%40soullmon-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/soullmon_)  
+[![Website](https://img.shields.io/badge/Website-soullmon-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://soullmon.github.io/portfolio/)
