@@ -12,19 +12,21 @@
   const bgLayer = document.getElementById("bgLayer");
   const preview = document.getElementById("preview");
   const materiTitle = document.getElementById("materi-title");
-  const materiDesc = document.getElementById("materi-desc");
+  const materiDesc = document.getElementById("materi-desc")
 
-  const randomBackgrounds = ["assets/bg1.jpg","assets/bg2.jpg","assets/bg3.jpg","assets/bg4.jpg","assets/bg5.jpg","assets/bg6.jpg","assets/bg7.jpg"];
-  const decorImages = ["assets/decor1.png","assets/decor2.png","assets/decor3.png","assets/decor4.png","assets/decor5.png","assets/decor6.png","assets/decor7.png","assets/decor8.png","assets/decor9.png","assets/decor10.png"];
-
-avatarUpload.addEventListener('change', (event) => {
+// === UPLOAD AVATAR PREVIEW ===
+avatarUpload.addEventListener("change", (event) => {
   const file = event.target.files[0];
+  if (!file) return;
   const reader = new FileReader();
   reader.onload = (e) => {
-    document.getElementById('avatar').src = e.target.result;
+    avatar.src = e.target.result;
   };
   reader.readAsDataURL(file);
 });
+
+  const randomBackgrounds = ["assets/bg1.jpg","assets/bg2.jpg","assets/bg3.jpg","assets/bg4.jpg","assets/bg5.jpg","assets/bg6.jpg","assets/bg7.jpg"];
+  const decorImages = ["assets/decor1.png","assets/decor2.png","assets/decor3.png","assets/decor4.png","assets/decor5.png","assets/decor6.png","assets/decor7.png","assets/decor8.png","assets/decor9.png","assets/decor10.png"];
 
     // === Tambahan: Data Materi ===
   const materiData = {
