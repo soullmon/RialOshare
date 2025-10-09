@@ -1,4 +1,4 @@
-# RialOshare | Rialo Threads Generator
+# 🌌 RialOshare | Rialo Threads Generator
 
 **RialOshare** is a **thread/post generator tool for X (Twitter)** focused on the **Rialo ecosystem**, built to support **community education and contribution**.  
 With RialOshare, you can **automatically generate educational threads** and **share insights about Rialo** in an engaging, fast, and consistent way.
@@ -51,7 +51,7 @@ You can help by:
 
 ---
 
-### 🌌 “Share your threads. Spread the knowledge. Build the AI-native Web3.”
+### “Share your threads. Spread the knowledge. Build the AI-native Web3.”
 
 ---
 
