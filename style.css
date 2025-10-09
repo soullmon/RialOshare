@@ -272,5 +272,114 @@ body {
   box-shadow: 0 0 25px rgba(169, 221, 211, 0.4);
 }
 
+/* --- Responsive Mobile Layout --- */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+    font-size: 14px;
+  }
 
-  </style>
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 14px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .preview {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+  }
+
+  .text-area {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .text-area h2 {
+    font-size: 18px;
+  }
+
+  .profile-card {
+    position: relative;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    background: rgba(0,0,0,0.5);
+    border-radius: 16px;
+  }
+
+  .profile-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .nickname {
+    font-size: 18px;
+  }
+
+  .controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  select, input, button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .multi-select {
+    width: 100%;
+  }
+
+  .multi-select-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* --- Extra small phones --- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .text-area h2 {
+    font-size: 16px;
+  }
+
+  .profile-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nickname {
+    font-size: 16px;
+  }
+
+  .roles img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
