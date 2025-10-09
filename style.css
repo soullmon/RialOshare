@@ -19,7 +19,11 @@ body {
       letter-spacing: 1px;
     }
 
-    
+      p {
+      font-family: Montserrat;
+      text-decoration: none;
+      color:white;}
+
     h3,a {
       font-family: Montserrat;
       text-decoration: none;
