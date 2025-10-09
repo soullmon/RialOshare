@@ -368,7 +368,7 @@ body {
   .rialoverse-ad p {
     font-size: 12px;
   }
-}
+      
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 900px) {
   body {
@@ -502,4 +502,4 @@ body {
     font-size: 13px;
     padding: 8px 10px;
   }
-}
+
