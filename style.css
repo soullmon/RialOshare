@@ -476,8 +476,7 @@ body {
   .multi-select button {
     width: 100%;
   }
-}
-
+      
 /* === SMALLER DEVICES (under 480px) === */
 @media (max-width: 480px) {
   h1 {
