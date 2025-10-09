@@ -77,9 +77,9 @@ avatarUpload.addEventListener("change", (event) => {
     "This Is Just Beginning": {
       title: "This Is Just Beginning",
       content: `
-        <p>Subzero Labs believes the future of Web3 is AI-native, where users can earn passive income through AI agents and build custom AI workflows on-chain without complex prompt engineering. 
+        <p><h3>Subzero Labs believes the future of Web3 is AI-native, where users can earn passive income through AI agents and build custom AI workflows on-chain without complex prompt engineering. 
         Rialo makes this possible, with SCALE as the first step toward that vision. Developers and creators are invited to collaborate in building the future of Rialo + AI.
-        <img src="assets/img/subzeroxrialo.png" alt="AI Future"></p>
+        <img src="assets/img/subzeroxrialo.png" alt="AI Future"><h3></p>
       `
     },
 
