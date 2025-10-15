@@ -82,13 +82,6 @@ avatarUpload.addEventListener("change", (event) => {
         <img src="assets/img/subzeroxrialo.png" alt="AI Future"></p>
       `
     },
-
-    "Rialo Role System": {
-      title: "Rialo Role System",
-      content: `
-        <img src="assets/img/roles.jpg" alt="Role System">
-      `
-    },
     
     "Rialo Solution": {
       title: "Rialo Solution",
@@ -107,6 +100,14 @@ avatarUpload.addEventListener("change", (event) => {
       </ol>
       `
     }
+
+    "Rialo Role System": {
+      title: "Rialo Role System",
+      content: `
+        <img src="assets/img/roles.jpg" alt="Role System">
+      `
+    }
+    
   };
 
   // === Change material ===
