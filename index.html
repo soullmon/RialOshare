@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- HTML Meta Tags -->
-<title>RialOshare | Rialo Thread Generator</title>
-<meta name="description" content="RialOshare is a thread/post generator tool focused on the Rialo ecosystem, built to support community education and contribution.">
+  <title>RialOshare | Rialo Thread Generator</title>
+  <meta name="description" content="RialOshare is a thread/post generator tool focused on the Rialo ecosystem, built to support community education and contribution.">
 
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://soullmon.github.io/RialOshare/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="RialOshare | Rialo Thread Generator">
-<meta property="og:description" content="RialOshare is a thread/post generator tool focused on the Rialo ecosystem, built to support community education and contribution.">
-<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/e1c244bc-f876-4876-a726-718cff58e9aa.jpg?token=0K10dvY79xRY1BxUG1Tk-PVjCEqxGyBHNTQKmf8N0b0&height=600&width=1200&expires=33295994173">
+  <!-- Open Graph -->
+  <meta property="og:url" content="https://soullmon.github.io/RialOshare/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RialOshare | Rialo Thread Generator">
+  <meta property="og:description" content="RialOshare is a thread/post generator tool focused on the Rialo ecosystem, built to support community education and contribution.">
+  <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/e1c244bc-f876-4876-a726-718cff58e9aa.jpg">
 
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="soullmon.github.io">
-<meta property="twitter:url" content="https://soullmon.github.io/RialOshare/">
-<meta name="twitter:title" content="RialOshare | Rialo Thread Generator ">
-<meta name="twitter:description" content="RialOshare is a thread/post generator tool focused on the Rialo ecosystem, built to support community education and contribution.">
-<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/e1c244bc-f876-4876-a726-718cff58e9aa.jpg?token=0K10dvY79xRY1BxUG1Tk-PVjCEqxGyBHNTQKmf8N0b0&height=600&width=1200&expires=33295994173">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="soullmon.github.io">
+  <meta property="twitter:url" content="https://soullmon.github.io/RialOshare/">
+  <meta name="twitter:title" content="RialOshare | Rialo Thread Generator">
+  <meta name="twitter:description" content="RialOshare is a thread/post generator tool focused on the Rialo ecosystem, built to support community education and contribution.">
+  <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/e1c244bc-f876-4876-a726-718cff58e9aa.jpg">
 
-<!-- Meta Tags Generated via https://www.opengraph.xyz -->
-  <!-- FAVICON -->
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
-
-   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <h1>RialOshare</h1>
-  <h3>by: <a href="www.x.com/soullmon_">@soullmon_  </a>  |   Powered by: <a href="www.x.com/RialoHQ">@RialoHQ</a></h3>
-  <p>Dekstop Mode for best experience!</p>
+  <p class="sub-header">
+    by <a href="https://x.com/soullmon_" target="_blank">@soullmon_</a> | 
+    Powered by <a href="https://x.com/RialoHQ" target="_blank">@RialoHQ</a>
+  </p>
+  <p><strong>Desktop Mode</strong> for best experience!</p>
 
   <div class="preview" id="preview">
     <div class="bg-layer" id="bgLayer"></div>
     <div class="text-area" id="textArea">
       <h2 id="materi-title">How To Use RialOshare</h2>
       <ol id="materi-desc">
-<li> Select the material to display on the banner.</li>
-<li> Enter your nickname X for the profile.</li>
-<li> Upload an avatar/profile image from your device.</li>
-<li> Choose a role (optional) to show on the banner.</li>
-<li> Click 'Generate Banner' to create the banner with a random background and top-layer decoration.</li>
-<li> Download the created banner using the 'Download' button.</li>
-<li> Share the banner to X (Twitter) using the 'Share to X' button.</li>
-
+        <li>Select the material to display on the banner.</li>
+        <li>Enter your nickname X for the profile.</li>
+        <li>Upload an avatar/profile image from your device.</li>
+        <li>Choose a role (optional) to show on the banner.</li>
+        <li>Click 'Generate Banner' to create the banner with a random background and decoration.</li>
+        <li>Download the banner using 'Download'.</li>
+        <li>Share it to X (Twitter) using 'Share to X'.</li>
       </ol>
     </div>
 
     <div class="profile-card">
-      <img id="avatar" src="https://via.placeholder.com/90" alt="RialOverse">
+      <img id="avatar" src="https://via.placeholder.com/90" alt="User Avatar">
       <div class="nickname" id="userName">Username</div>
       <div class="roles" id="roleList"></div>
       <div class="x-handle">
@@ -78,47 +78,44 @@
 
     <input type="text" id="xInput" placeholder="@nickname X">
     <input type="text" id="nameInput" placeholder="Username">
-    <span>Text Color
-    <input type="color" id="textColor" value="#e8e3d5"></span>
-    <span>Back Color
-    <input type="color" id="textBgColor" value="#0b0b0b"></span>
+
+    <label>Text Color <input type="color" id="textColor" value="#e8e3d5"></label>
+    <label>Back Color <input type="color" id="textBgColor" value="#0b0b0b"></label>
+
     <input type="file" id="avatarUpload" accept="image/*">
 
     <div class="multi-select">
-      <button>Pilih Role ▼</button>
+      <button aria-expanded="false">Select Role ▼</button>
       <div class="multi-select-content" id="roleDropdown">
         <label><input type="checkbox" value="RialONE"><img src="assets/icons/rialone.png"><span>RialONE</span></label>
         <label><input type="checkbox" value="Builder"><img src="assets/icons/builder.png"><span>Builder</span></label>
         <label><input type="checkbox" value="Rialo Club Member"><img src="assets/icons/rialoclub.png"><span>Rialo Club Member</span></label>
         <label><input type="checkbox" value="Regional Helper"><img src="assets/icons/helper.png"><span>Region Helper</span></label>
-        <!--
-        <label><input type="checkbox" value="rialops"><img src="assets/icons/rialops.png"><span>RialOps</span></label>
-        <label><input type="checkbox" value="xplorer"><img src="assets/icons/xplorer.png"><span>Xplorer</span></label>
-        <label><input type="checkbox" value="badgex"><img src="assets/icons/badgex.png"><span>BadgeX</span></label>
-        <label><input type="checkbox" value="rialorbit"><img src="assets/icons/rialorbit.png"><span>Rial Orbit</span></label>
-        <label><input type="checkbox" value="rialoyal"><img src="assets/icons/rialoyal.png"><span>RialOyal</span></label>
-        <label><input type="checkbox" value="Regional Helper"><img src="assets/icons/helper.png"><span>Region Helper</span></label>
-        <label><input type="checkbox" value="smartdev"><img src="assets/icons/smartdev.png"><span>Smart Contract Dev</span></label>
-      -->
       </div>
     </div>
 
     <div class="btn-group">
       <button id="generateBtn">Generate</button>
       <button id="downloadBtn">Download</button>
-      <button id="shareBtn">Share ke X</button>
+      <button id="shareBtn">Share to X</button>
     </div>
   </div>
- <!-- ADS RialOverse -->
-<div class="rialoverse-ad" id="rialoverseAd">
-  <img src="assets/img/rialoverse-ads.gif" alt="RialOverse" class="ad-image">
-  <div class="ad-text">
-    <h4>Explore RialOverse!</h4>
-<p>Create your unique avatar and show everyone Rialo!</p>
-    <a href="https://soullmon.github.io/RialOverse/" target="_blank">ENTER</a>
+
+  <!-- ADS -->
+  <div class="rialoverse-ad" id="rialoverseAd">
+    <img src="assets/img/rialoverse-ads.gif" alt="RialOverse Ad" class="ad-image">
+    <div class="ad-text">
+      <h4>Explore RialOverse!</h4>
+      <p>Create your unique avatar and show everyone Rialo!</p>
+      <a href="https://soullmon.github.io/RialOverse/" target="_blank">ENTER</a>
+    </div>
   </div>
-</div>
- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <footer>
+    <p>© 2025 RialOshare | Built by <a href="https://x.com/soullmon_" target="_blank">@soullmon_</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
