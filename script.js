@@ -172,7 +172,7 @@ avatarUpload.addEventListener("change", (event) => {
         files: [file],
       });
     } else {
-      const tweetText = encodeURIComponent("✨ My RialO Card Created with #RialOshare");
+      const tweetText = encodeURIComponent("✨Rethink, Rebuild, Rialo | Created with #RialOshare");
       window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, "_blank");
     }
   });
