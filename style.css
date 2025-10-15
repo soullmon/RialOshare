@@ -241,10 +241,11 @@ body {
       cursor: pointer;
     }
 
-    .multi-select img {
-      width: 20px;
-      height: 20px;
-    }
+.multi-select-content img {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
   ul {
   list-style: none; /* remove bullet or number */
   padding-left: 2px;
