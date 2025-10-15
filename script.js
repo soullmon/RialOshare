@@ -96,7 +96,6 @@ const materiData = {
   "Rialo Solution": {
     title: "Rialo Solution",
     content: `
-      <p>Despite faster blockchains, Web3 adoption stays low because users don’t want to leave the familiarity of Web2.</p>
       <p><strong>Rialo’s Solution:</strong>
       Rialo bridges Web2 and Web3, enabling developers to build decentralized apps that feel like modern, user-friendly software with real-world connectivity.</p>
       <ol>
