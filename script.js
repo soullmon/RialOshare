@@ -25,7 +25,7 @@ avatarUpload.addEventListener("change", (event) => {
   reader.readAsDataURL(file);
 });
 
-  const randomBackgrounds = ["assets/bg1.jpg","assets/bg2.jpg","assets/bg3.jpg","assets/bg4.jpg","assets/bg5.jpg","assets/bg6.jpg","assets/bg7.jpg","assets/bg8.jpg"];
+  const randomBackgrounds = ["assets/bg1.jpg","assets/bg2.jpg","assets/bg3.jpg","assets/bg4.jpg","assets/bg5.jpg","assets/bg6.jpg","assets/bg7.jpg","assets/bg8.jpg","assets/bg9.jpg","assets/bg10.jpg"];
   const decorImages = ["assets/decor1.png","assets/decor2.png","assets/decor3.png","assets/decor4.png","assets/decor5.png","assets/decor6.png","assets/decor7.png","assets/decor8.png","assets/decor9.png","assets/decor10.png","assets/decor11.png",,"assets/decor12.png","assets/decor13.png","assets/decor14.png"];
 
     // === Tambahan: Data Materi ===
@@ -113,7 +113,7 @@ avatarUpload.addEventListener("change", (event) => {
     });
 
     document.getElementById("materi-title").textContent = materiSelect.value;
-    document.getElementById("socialHandle").textContent = xInput.value || "@RialoNetwork";
+    document.getElementById("socialHandle").textContent = xInput.value || "@yourXhandle";
     document.getElementById("userName").textContent = nameInput.value || "Username";
     textArea.style.color = textColor.value;
     textArea.style.background = textBgColor.value + "cc";
