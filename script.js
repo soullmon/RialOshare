@@ -1,18 +1,18 @@
-  const avatarUpload = document.getElementById("avatarUpload");
-  const avatar = document.getElementById("avatar");
-  const roleList = document.getElementById("roleList");
-  const roleDropdown = document.getElementById("roleDropdown");
-  const materiSelect = document.getElementById("materiSelect");
-  const xInput = document.getElementById("xInput");
-  const nameInput = document.getElementById("nameInput");
-  const textColor = document.getElementById("textColor");
-  const textBgColor = document.getElementById("textBgColor");
-  const textArea = document.getElementById("textArea");
-  const overlayDecor = document.getElementById("overlayDecor");
-  const bgLayer = document.getElementById("bgLayer");
-  const preview = document.getElementById("preview");
-  const materiTitle = document.getElementById("materi-title");
-  const materiDesc = document.getElementById("materi-desc")
+const avatarUpload = document.getElementById("avatarUpload");
+const avatar = document.getElementById("avatar");
+const roleList = document.getElementById("roleList");
+const roleDropdown = document.getElementById("roleDropdown");
+const materiSelect = document.getElementById("materiSelect");
+const xInput = document.getElementById("xInput");
+const nameInput = document.getElementById("nameInput");
+const textColor = document.getElementById("textColor");
+const textBgColor = document.getElementById("textBgColor");
+const textArea = document.getElementById("textArea");
+const overlayDecor = document.getElementById("overlayDecor");
+const bgLayer = document.getElementById("bgLayer");
+const preview = document.getElementById("preview");
+const materiTitle = document.getElementById("materi-title");
+const materiDesc = document.getElementById("materi-desc");
 
 // === UPLOAD AVATAR PREVIEW ===
 avatarUpload.addEventListener("change", (event) => {
@@ -25,92 +25,99 @@ avatarUpload.addEventListener("change", (event) => {
   reader.readAsDataURL(file);
 });
 
-  const randomBackgrounds = ["assets/bg1.jpg","assets/bg2.jpg","assets/bg3.jpg","assets/bg4.jpg","assets/bg5.jpg","assets/bg6.jpg","assets/bg7.jpg","assets/bg8.jpg","assets/bg9.jpg","assets/bg10.jpg"];
-  const decorImages = ["assets/decor1.png","assets/decor2.png","assets/decor3.png","assets/decor4.png","assets/decor5.png","assets/decor6.png","assets/decor7.png","assets/decor8.png","assets/decor9.png","assets/decor10.png","assets/decor11.png",,"assets/decor12.png","assets/decor13.png","assets/decor14.png"];
+const randomBackgrounds = [
+  "assets/bg1.jpg","assets/bg2.jpg","assets/bg3.jpg","assets/bg4.jpg",
+  "assets/bg5.jpg","assets/bg6.jpg","assets/bg7.jpg","assets/bg8.jpg",
+  "assets/bg9.jpg","assets/bg10.jpg"
+];
 
-    // === Tambahan: Data Materi ===
-  const materiData = {
-    "Tutorial": { 
-      title: "How To Use RialOshare",
-      content: `
-        <ul>
-          <li> Select the material to display on the banner.</li>
-          <li> Enter your nickname X for the profile.</li>
-          <li> Upload an avatar/profile image from your device.</li>
-          <li> Choose a role (optional) to show on the banner.</li>
-          <li> Click 'Generate Banner' to create the banner with a random background and top-layer decoration.</li>
-          <li> Download the created banner using the 'Download' button.</li>
-          <li> Share the banner to X (Twitter) using the 'Share to X' button.</li>
-        </ul>
-      `
-    },
-    
-    "What Is Rialo?": {
-      title: "What Is Rialo?",
-      content: `
-        <h3>Rialo is more than just a typical Layer 1 blockchain. It is a full-stack system that integrates web calls, oracles, scheduling, and native stable gas.</h3>
-        <h3>This allows developers to build responsive applications that connect directly to real-world data without needing additional middleware.</h3>
-      `
-    },
+const decorImages = [
+  "assets/decor1.png","assets/decor2.png","assets/decor3.png","assets/decor4.png",
+  "assets/decor5.png","assets/decor6.png","assets/decor7.png","assets/decor8.png",
+  "assets/decor9.png","assets/decor10.png","assets/decor11.png",
+  "assets/decor12.png","assets/decor13.png","assets/decor14.png"
+];
 
-    "RWA Rialo": {
-      title: "RWA Rialo",
-      content: `
-        <ol>
-          <li><strong>Direct data connectivity:</strong> Assets are directly linked to real-world data and react automatically.</li>
-          <li><strong>Automation & on-chain reactivity:</strong> Smart contracts adjust prices, payments, and terms in real time.</li>
-          <li><strong>Privacy & real identity:</strong> Supports real-world identities with built-in privacy protection.</li>
-          <li><strong>Speed & scalability:</strong> Sub-second reactions capable of handling large-scale performance.</li>
-        </ol>
-        <p><strong>Rialo makes Real-World Assets come alive on-chain — connected, automated, and responsive.</strong></p>
-      `
-    },
+// === Materi Data ===
+const materiData = {
+  "Tutorial": { 
+    title: "How To Use RialOshare",
+    content: `
+      <ul>
+        <li>Select the material to display on the banner.</li>
+        <li>Enter your nickname X for the profile.</li>
+        <li>Upload an avatar/profile image from your device.</li>
+        <li>Choose a role (optional) to show on the banner.</li>
+        <li>Click 'Generate Banner' to create the banner with a random background and top-layer decoration.</li>
+        <li>Download the created banner using the 'Download' button.</li>
+        <li>Share the banner to X (Twitter) using the 'Share to X' button.</li>
+      </ul>
+    `
+  },
+  
+  "What Is Rialo?": {
+    title: "What Is Rialo?",
+    content: `
+      <h3>Rialo is more than just a typical Layer 1 blockchain. It is a full-stack system that integrates web calls, oracles, scheduling, and native stable gas.</h3>
+      <h3>This allows developers to build responsive applications that connect directly to real-world data without needing additional middleware.</h3>
+    `
+  },
 
-    "Rialo Isn't Layer One": {
-      title: "Rialo Isn't Layer One",
-      content: `
-        <h3><strong>No plugins. No patchwork.</strong> Rialo unifies what used to be fragmented into a single, full-stack system, so apps can launch faster and run smoother like the products people expect.</h3>
-        <h3>Web calls, smart triggers, cross-chain flows — it’s all native. <strong>Build Less, Build More.</strong></h3>
-      `
-    },
+  "RWA Rialo": {
+    title: "RWA Rialo",
+    content: `
+      <ol>
+        <li><strong>Direct data connectivity:</strong> Assets are directly linked to real-world data and react automatically.</li>
+        <li><strong>Automation & on-chain reactivity:</strong> Smart contracts adjust prices, payments, and terms in real time.</li>
+        <li><strong>Privacy & real identity:</strong> Supports real-world identities with built-in privacy protection.</li>
+        <li><strong>Speed & scalability:</strong> Sub-second reactions capable of handling large-scale performance.</li>
+      </ol>
+      <p><strong>Rialo makes Real-World Assets come alive on-chain — connected, automated, and responsive.</strong></p>
+    `
+  },
 
-    "This Is Just Beginning": {
-      title: "This Is Just Beginning",
-      content: `
-        <p>Subzero Labs believes the future of Web3 is AI-native, where users can earn passive income through AI agents and build custom AI workflows on-chain without complex prompt engineering. 
-        Rialo makes this possible, with SCALE as the first step toward that vision. Developers and creators are invited to collaborate in building the future of Rialo + AI.
-        <img src="assets/img/subzeroxrialo.png" alt="AI Future"></p>
-      `
-    },
-    
-    "Rialo Solution": {
-      title: "Rialo Solution",
-      content: `
+  "Rialo Isn't Layer One": {
+    title: "Rialo Isn't Layer One",
+    content: `
+      <h3><strong>No plugins. No patchwork.</strong> Rialo unifies what used to be fragmented into a single, full-stack system, so apps can launch faster and run smoother like the products people expect.</h3>
+      <h3>Web calls, smart triggers, cross-chain flows — it’s all native. <strong>Build Less, Build More.</strong></h3>
+    `
+  },
+
+  "This Is Just Beginning": {
+    title: "This Is Just Beginning",
+    content: `
+      <p>Subzero Labs believes the future of Web3 is AI-native, where users can earn passive income through AI agents and build custom AI workflows on-chain without complex prompt engineering. 
+      Rialo makes this possible, with SCALE as the first step toward that vision. Developers and creators are invited to collaborate in building the future of Rialo + AI.</p>
+      <img src="assets/img/subzeroxrialo.png" alt="AI Future">
+    `
+  },
+
+  "Rialo Solution": {
+    title: "Rialo Solution",
+    content: `
       <p>Despite faster blockchains, Web3 adoption stays low because users don’t want to leave the familiarity of Web2. Current chains are isolated from real-world systems, making onboarding complex and unintuitive.</p>
       <strong>Rialo’s Solution:</strong>
-      <p>DRialo bridges Web2 and Web3, enabling developers to build decentralized apps that feel like modern, user-friendly software with real-world connectivity.</p>
+      <p>Rialo bridges Web2 and Web3, enabling developers to build decentralized apps that feel like modern, user-friendly software with real-world connectivity.</p>
       <ol>
-          <li>Fragmented networks and risky asset bridging</li>
-          <li>Poor wallet UX and constant signing</li>
-          <li>Unstable fees and oracle failures</li>
-          <li>Loss of Web2 social identity</li>
-          <li>Always-on culture</li>
-          <li>Loss of Web2 social identity</li>
-          <li>Lack of essential security like 2FA </li>
+        <li>Fragmented networks and risky asset bridging</li>
+        <li>Poor wallet UX and constant signing</li>
+        <li>Unstable fees and oracle failures</li>
+        <li>Loss of Web2 social identity</li>
+        <li>Always-on culture</li>
+        <li>Lack of essential security like 2FA</li>
       </ol>
-      `
-    }
+    `
+  },
 
-    "Rialo Role System": {
-      title: "Rialo Role System",
-      content: `
-        <img src="assets/img/roles.jpg" alt="Role System">
-      `
-    }
-    
-  };
+  "Rialo Role System": {
+    title: "Rialo Role System",
+    content: `<img src="assets/img/roles.jpg" alt="Role System">`
+  }
+};
 
-  // === Change material ===
+// === Change material ===
+if (materiSelect) {
   materiSelect.addEventListener("change", () => {
     const selected = materiSelect.value;
     const materi = materiData[selected];
@@ -119,60 +126,63 @@ avatarUpload.addEventListener("change", (event) => {
       materiDesc.innerHTML = materi.content;
     }
   });
+}
 
+// === Generate Banner ===
+document.getElementById("generateBtn").addEventListener("click", () => {
+  roleList.innerHTML = "";
+  const checked = roleDropdown.querySelectorAll("input:checked");
+  checked.forEach(cb => {
+    const div = document.createElement("div");
+    div.classList.add("role-badge");
+    div.innerHTML = `<img src="assets/icons/${cb.value}.png"><span>${cb.parentElement.querySelector("span").textContent}</span>`;
+    roleList.appendChild(div);
+  });
 
-  document.getElementById("generateBtn").addEventListener("click", () => {
-    roleList.innerHTML = "";
-    const checked = roleDropdown.querySelectorAll("input:checked");
-    checked.forEach(cb => {
-      const div = document.createElement("div");
-      div.classList.add("role-badge");
-      div.innerHTML = `<img src="assets/icons/${cb.value}.png"><span>${cb.parentElement.querySelector("span").textContent}</span>`;
-      roleList.appendChild(div);
+  document.getElementById("materi-title").textContent = materiSelect.value;
+  document.getElementById("socialHandle").textContent = xInput.value || "@yourXhandle";
+  document.getElementById("userName").textContent = nameInput.value || "Username";
+  textArea.style.color = textColor.value;
+  textArea.style.background = textBgColor.value + "cc";
+
+  // random background
+  bgLayer.innerHTML = "";
+  const bg = document.createElement("img");
+  bg.src = randomBackgrounds[Math.floor(Math.random() * randomBackgrounds.length)];
+  Object.assign(bg.style, {width:"100%",height:"100%",objectFit:"cover",opacity:"0.9"});
+  bgLayer.appendChild(bg);
+
+  // random overlay
+  overlayDecor.innerHTML = "";
+  const decor = document.createElement("img");
+  decor.src = decorImages[Math.floor(Math.random() * decorImages.length)];
+  Object.assign(decor.style,{position:"absolute",width:"100%",height:"100%",objectFit:"cover",opacity:"0.8"});
+  overlayDecor.appendChild(decor);
+});
+
+// --- DOWNLOAD FUNCTION ---
+document.getElementById("downloadBtn").addEventListener("click", async () => {
+  const canvas = await html2canvas(preview, { backgroundColor: null, scale: 2 });
+  const link = document.createElement("a");
+  link.download = "RialOshare.png";
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+});
+
+// --- SHARE TO X FUNCTION ---
+document.getElementById("shareBtn").addEventListener("click", async () => {
+  const canvas = await html2canvas(preview, { backgroundColor: null, scale: 2 });
+  const image = canvas.toDataURL("image/png");
+  const blob = await (await fetch(image)).blob();
+  const file = new File([blob], "RialO-Card.png", { type: "image/png" });
+
+  if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    await navigator.share({
+      text: "✨Rethink, Rebuild, Rialo | Created with #RialOshare",
+      files: [file],
     });
-
-    document.getElementById("materi-title").textContent = materiSelect.value;
-    document.getElementById("socialHandle").textContent = xInput.value || "@yourXhandle";
-    document.getElementById("userName").textContent = nameInput.value || "Username";
-    textArea.style.color = textColor.value;
-    textArea.style.background = textBgColor.value + "cc";
-
-    bgLayer.innerHTML = "";
-    const bg = document.createElement("img");
-    bg.src = randomBackgrounds[Math.floor(Math.random() * randomBackgrounds.length)];
-    Object.assign(bg.style, {width:"100%",height:"100%",objectFit:"cover",opacity:"0.9"});
-    bgLayer.appendChild(bg);
-
-    overlayDecor.innerHTML = "";
-    const decor = document.createElement("img");
-    decor.src = decorImages[Math.floor(Math.random() * decorImages.length)];
-    Object.assign(decor.style,{position:"absolute",width:"100%",height:"100%",objectFit:"cover",opacity:"0.8"});
-    overlayDecor.appendChild(decor);
-  });
-
-  // --- DOWNLOAD FUNCTION ---
-  document.getElementById("downloadBtn").addEventListener("click", async () => {
-    const canvas = await html2canvas(preview, { backgroundColor: null, scale: 2 });
-    const link = document.createElement("a");
-    link.download = "RialOshare.png";
-    link.href = canvas.toDataURL("image/png");
-    link.click();
-  });
-
-  // --- SHARE TO X FUNCTION ---
-  document.getElementById("shareBtn").addEventListener("click", async () => {
-    const canvas = await html2canvas(preview, { backgroundColor: null, scale: 2 });
-    const image = canvas.toDataURL("image/png");
-    const blob = await (await fetch(image)).blob();
-    const file = new File([blob], "RialO-Card.png", { type: "image/png" });
-
-    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-      await navigator.share({
-        text: "✨ My RialO Threads Created with #RialOshare",
-        files: [file],
-      });
-    } else {
-      const tweetText = encodeURIComponent("✨Rethink, Rebuild, Rialo | Created with #RialOshare");
-      window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, "_blank");
-    }
-  });
+  } else {
+    const tweetText = encodeURIComponent("✨Rethink, Rebuild, Rialo | Created with #RialOshare");
+    window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, "_blank");
+  }
+});
