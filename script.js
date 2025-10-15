@@ -96,9 +96,9 @@ const materiData = {
   "Rialo Solution": {
     title: "Rialo Solution",
     content: `
-      <p>Despite faster blockchains, Web3 adoption stays low because users don’t want to leave the familiarity of Web2. Current chains are isolated from real-world systems, making onboarding complex and unintuitive.</p>
-      <strong>Rialo’s Solution:</strong>
-      <p>Rialo bridges Web2 and Web3, enabling developers to build decentralized apps that feel like modern, user-friendly software with real-world connectivity.</p>
+      <p>Despite faster blockchains, Web3 adoption stays low because users don’t want to leave the familiarity of Web2.</p>
+      <p><strong>Rialo’s Solution:</strong>
+      Rialo bridges Web2 and Web3, enabling developers to build decentralized apps that feel like modern, user-friendly software with real-world connectivity.</p>
       <ol>
         <li>Fragmented networks and risky asset bridging</li>
         <li>Poor wallet UX and constant signing</li>
